@@ -18,18 +18,18 @@ const addToCart = (item) =>{
 
 const viewCart = ()=>{
   let sentenceStart = "In your cart, you have "
-  let sentenceEnd = `and ${cart[cart.length-1].itemName} at $${cart[cart.length-1].itemPrice}.`
+  let sentenceEnd = `and ${cart[cart.length-1][itemName]} at $${cart[cart.length-1].itemPrice}.`
   if(cart.length === 0){
     return "Your shopping cart is empty."
   }else if(cart.length === 1){
-    sentenceStart+= `${cart[0].itemName} at $${cart[0].itemPrice}.`
+    sentenceStart+= `${cart[0][itemName]} at $${cart[0].itemPrice}.`
     return sentenceStart
   }else if(cart.length === 2){
-    sentenceStart+=`${cart[0].itemName} at $${cart[0].itemPrice}, and ${cart[1].itemName} at $${cart[1].itemPrice}.`
+    sentenceStart+=`${cart[0][itemName]} at $${cart[0].itemPrice}, and ${cart[1][itemName]} at $${cart[1].itemPrice}.`
       return sentenceStart
   }else{
     for(let i= 0; i<cart.length-1; i++){
-      sentenceStart+= `${cart[i].itemName} at $${cart[i].itemPrice}, `
+      sentenceStart+= `${cart[i][itemName]} at $${cart[i].itemPrice}, `
     }
     return sentenceStart + sentenceEnd
   }
