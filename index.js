@@ -43,9 +43,6 @@ const total = () =>{
 }
 
 const removeFromCart =item=>{
-  if(item !== cart[item]){
-      return "That item is not in your cart."
-  }
   if(item === cart[i].itemName){
     for(let i = 0; i<cart.length; i++){
       if(item === cart[i].itemName){
@@ -54,6 +51,10 @@ const removeFromCart =item=>{
       }
     }
   }
+  if(item !== cart[item]){
+      return "That item is not in your cart."
+  }
+  
    
 }
 
