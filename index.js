@@ -10,9 +10,9 @@ function setCart(c) {
 }
 
 const addToCart = (item) =>{
-  let price = Math.floor(Math.random()*100)
-  cart.push(Object.assign({},{itemName:item,itemPrice:price}))
-  return `${item} has been added to your cart.`
+  var itemObj = {itemName:`${item}`, itemPrice: Math.floor(Math.random()*100)}
+  cart.push(itemObj);
+  return itemObj.itemName + " has been added to your cart."
 }
 
 
