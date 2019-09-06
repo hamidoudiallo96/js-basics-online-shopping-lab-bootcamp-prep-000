@@ -30,7 +30,7 @@ const viewCart = ()=>{
       return sentenceStart
   }else{
     for(let i= 0; i<cart.length; i++){
-      sentenceStart+= `${cart[0].itemName} at $${cart[0].itemPrice},`
+      sentenceStart+= `${cart[i].itemName} at $${cart[i].itemPrice},`
     }
     return sentenceStart + sentenceEnd
   }
