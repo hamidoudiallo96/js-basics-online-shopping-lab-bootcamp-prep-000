@@ -23,12 +23,12 @@ const viewCart = ()=>{
     return "Your shopping cart is empty."
   }else{
     for(let i=0; i<cart.length-1; i++){
-        myString += `${cart[i][itemName]} at $${cart[i][itemPrice]}, `
+        myString += `${cart[i].itemName} at $${cart[i].itemPrice}, `
       
     }
   }
   
-  return myString+ endString;
+  return myString + endString;
 }
 
 
