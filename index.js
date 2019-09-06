@@ -17,17 +17,10 @@ const addToCart = (item) =>{
 
 
 const viewCart = ()=>{
-  let myString ="In your cart, you have "
-  let endString = `and ${cart[cart.length-1].itemName} at $${cart[cart.length-1].itemPrice}.`
   if(cart.length === 0){
-    return "Your shopping cart is empty."
-  }else{
-    for(let i=0; i<cart.length-1; i++){
-        myString += `${cart[i].itemName} at $${cart[i].itemPrice}, `
-    }
+    return "Your shopping cart is empty"
   }
-  
-  return myString + endString;
+  if(cart)
 }
 
 
