@@ -24,14 +24,16 @@ const viewCart = ()=>{
   }
   if(cart.length === 1){
     sentenceStart+= `${cart[0].itemName} at $${cart[0].itemPrice}.`
+    return sentenceStart
   }else if(cart.length === 2){
     sentenceStart+=`${cart[0].itemName} at $${cart[0].itemPrice}, and $${cart[1].itemName} at $${cart[1].itemPrice}.`
+      return sentenceStart
   }else{
     for(let i= 0; i<cart.length; i++){
       sentenceStart+= `${cart[0].itemName} at $${cart[0].itemPrice},`
     }
+    return sentenceStart + sentenceEnd
   }
-  return sentenceStart
 }
 
 
