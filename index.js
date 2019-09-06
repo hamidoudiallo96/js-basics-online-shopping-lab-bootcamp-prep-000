@@ -20,7 +20,7 @@ const viewCart = ()=>{
   let sentenceStart = "In your cart, you have "
   let sentenceEnd = `and ${cart[cart.length-1].itemName} at $${cart[cart.length-1].itemPrice}.`
   if(cart.length === 0){
-    return "Your shopping cart is empty"
+    return "Your shopping cart is empty."
   }else if(cart.length === 1){
     sentenceStart+= `${cart[0].itemName} at $${cart[0].itemPrice}.`
     return sentenceStart
