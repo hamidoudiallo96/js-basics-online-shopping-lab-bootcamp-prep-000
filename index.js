@@ -24,7 +24,6 @@ const viewCart = ()=>{
   }else{
     for(let i=0; i<cart.length-1; i++){
         myString += `${cart[i].itemName} at $${cart[i].itemPrice}, `
-      
     }
   }
   
